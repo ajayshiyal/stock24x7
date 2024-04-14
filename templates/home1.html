@@ -1,0 +1,179 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load custom_filters %}
+<!-- other_page.html -->
+{% include 'applechart.html' %}
+
+{% block title%} Welcome to stock24x7 {%endblock title%}
+{% block top%}
+
+
+{%endblock %}
+{% block content %}
+<header class="main-header">
+<nav class="navbar bg-body-tertiary navbar-expand-lg ">
+    <div class="container-fluid">
+    <a href="" class="navbar-brand">STOCK24X7
+    <button class="navbar-toggler">
+         <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapde navbar-collapse" id="navbarNavAlMarkup">
+    <div class="navbar-nav">
+      <a href="{% url 'myweb:home2'  %}" class="nav-link">home</a>
+      <a href="{% url 'myweb:lose'  %}" class="nav-link">Gain and Lose</a>
+   
+   
+      <a href="{% url 'myweb:registrationForm' %}" class="nav-link">Signup</a>
+      <a href="{% url 'myweb:logout' %}" class="nav-link">logout</a>
+    </div>
+  </div>
+</div>
+      <form action="" class="d-flex">
+        <input class="form-control-me-2" type="search" placeholder="serach" style="padding-left: 5px;"
+        <button class="btn-outline-success" type="subtim">serach</button>
+      </form>
+  </nav>
+</header>
+    
+  <div class="main-div1" >
+    <div class="card"     >
+      <a href="{% url 'myweb:aaple' %}">
+        <div class="chart" style="height: 200px; width: 200px;">
+          {% include 'applechart.html' %}
+        </div>
+      </a>
+        <div class="card-body">
+          <h5 class="card-title">AAPLE</h5>
+          <h6>    <p>Live Price: ${{ live_price2 }}</p>
+            <br>     <p>Close Price: ${{ close_price2 }}</p>
+          </h6>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 5px;">
+        <a href="{% url 'myweb:rel' %}">
+          <div class="chart" style="height: 200px; width: 200px;">
+            {% include 'relchart.html' %}
+          </div>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">RELLIANCE INDUSTTIES LMT</h5>
+          <h6>    <p>Live Price: ${{ close_price1 }}</p>
+                   <p>Close Price: ${{ close_price1 }}</p>
+          </h6>  
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; margin: 5px;">
+       <a href="{% url 'myweb:hdfc' %}"> 
+        
+          <div class="chart" style="height: 200px; width: 200px;">
+            {% include 'hdfcchart.html' %}
+          </div>
+        </a>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">HDFCBANK</h5>
+          <h6> <p>Live Price: ${{ close_price3 }}</p>
+                <br><p>Close Price: ${{ close_price3 }}</p></h6>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;margin: 5px;">
+        <a href="{% url 'myweb:icici' %}">
+          <div class="chart" style="height: 200px; width: 200px;">
+            {% include 'icicichart.html' %}
+          </div>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">ICICIBANK</h5>
+          <h6><p>Live Price: ${{ close_price4 }}</p>
+              <br><p>Close Price: ${{ close_price4 }}</p></h6>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;margin: 5px;">
+        <a href="{% url 'myweb:tcs' %}">
+        
+          <div class="chart" style="height: 200px; width: 200px;">
+            {% include 'tcschart.html' %}
+            </div>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">TCS.NS</h5>
+          <h6><p>Live Price: ${{ close_price5 }}</p>
+              <br><p>Close Price: ${{ close_price5 }}</p></h6>
+        </div>
+      </div>
+            
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div style="display: flex; background-color:aqua; justify-content: center; margin: 10px;">
+      <div class="card" style="width: 18rem;margin: 5px;">
+        <a href="{% url 'myweb:itc' %}">
+          
+          <div class="chart" style="height: 200px; width: 200px;">
+            {% include 'itcchart.html' %}
+            </div>
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">ITC</h5>
+            <h6><p>Live Price: ${{ close_price6 }}</p>
+                 <br><p>Close Price: ${{ close_price6 }}</p></h6>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;margin: 5px;">
+          <a href="{% url 'myweb:airtel' %}">
+          
+            <div class="chart" style="height: 200px; width: 200px;">
+              {% include 'aitlchart.html' %}
+              </div>
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">BHARTI AIRTEL</h5>
+            <h6><p>Live Price: ${{ close_price7 }}</p>
+                <br><p>Close Price: ${{ close_price7 }}</p></h6>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;margin: 5px;">
+          <a href="{% url 'myweb:tata' %}">
+          
+            <div class="chart" style="height: 200px; width: 200px;">
+              {% include 'tatachart.html' %}
+              </div>
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">TATAMOTORS</h5>
+            <h6><p>Live Price: ${{ close_price8 }}</p>
+                <br><p>Close Price: ${{ close_price8 }}</p></h6>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;margin: 5px;">
+          <a href="{% url 'myweb:bpcl' %}">
+            {% include 'bpclchart.html' %}
+        </a>
+          <div class="card-body">
+            <h5 class="card-title">BPCL</h5>
+            <h6><p>Live Price: ${{ close_price9 }}</p>
+                <br><p>Close Price: ${{ close_price9 }}</p></h6></h6>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;margin: 5px;">
+          <a href="{% url 'myweb:sbi' %}">
+            <div class="chart" style="height: 200px; width: 200px;">
+              {% include 'sbichart.html' %}
+              </div>
+        </a>
+          <div class="card-body">
+            <h5 class="card-title">SBI</h5>
+            <h6><p>Live Price: ${{ close_price10 }}</p>
+              <br><p>Close Price: ${{ close_price10 }}</p></h6>
+          </div>
+        </div>
+        
+        </div>
+    </div>    
+{% endblock %}

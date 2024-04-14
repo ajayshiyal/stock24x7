@@ -1,0 +1,47 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stock Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart{
+            height: 200px;
+            width: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="chart">
+        <canvas id="liveStockChart" ></canvas>
+
+    </div>
+    
+    <script>
+       
+       var chartData = {{ chart_data | to_json | safe }};
+
+        var ctx = document.getElementById('liveStockChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Array.from(Array(chartData.length), (_, i) => i + 1),
+                datasets: [{
+                    label: 'Bharati Airtel stock price',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: chartData,
+                    fill: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+    </script>
+</body>
+</html>

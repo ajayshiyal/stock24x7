@@ -1,0 +1,76 @@
+ *{
+   background-color: aqua;
+ }
+ .ancer{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-decoration: none;
+ }
+ .ab{
+      text-decoration: none;
+
+
+ }
+ .ab:hover{
+    color: white;
+ }
+ form{
+    text-align: center;
+ }
+ .form-unit{
+    font-size: 25px;
+ }
+ .in{
+    width: 250px;
+    height: 30px;
+    background-color: white;
+
+ }
+ .in:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 20px 20px 20px aqua;
+    width: 270px;
+    height: 40px;
+    
+ }
+ .su{
+    margin: 10px;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    
+
+ }
+ .su:hover{
+    background-color: black;
+    color: white;
+    width:120px ;
+    height:30px ;
+    border-radius: 12px;
+ }
+ .pp{
+    text-align: center;
+
+    margin-top: 20px;
+    font-size: 20px;
+ }
+ .ou{
+    margin: 5px;
+    width: 250px;
+    height: 25px;
+    color: white;
+    background-color: black;
+ }
+ .ou:hover{
+    box-shadow: 30px 30px 30px aqua;
+    width: 270px;
+    height: 30px;
+
+
+ }
+ 

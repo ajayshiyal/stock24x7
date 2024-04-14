@@ -1,0 +1,47 @@
+
+.pg{
+    color: pink;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+.li{
+    margin: 20px;
+    
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    
+}
+.li:hover{
+    background-color: white;
+    color: black;
+
+}
+.center{
+    text-align: center;
+}
+.acc{
+    background-color: black;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+       margin-bottom:40px ;   
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
